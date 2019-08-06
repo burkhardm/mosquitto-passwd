@@ -14,9 +14,9 @@ The password script will generate a `./passwd` folder including the following pa
 ## For single user
 The following command generates the password files for the default username: 'user'.
 
-`docker run -v $(pwd)/passwd:/passwd burkhardm/mosquitto-passwd`
+`docker run -v ${pwd}/passwd:/passwd burkhardm/mosquitto-passwd`
 
 ## For multiple users
 The following command generates the password files for every user passed as command-line argument.
 
-`docker run -v $(pwd)/passwd:/passwd burkhardm/mosquitto-passwd user0 user1 user2`
+`docker run -v ${pwd}/passwd:/passwd burkhardm/mosquitto-passwd user0 user1 user2`

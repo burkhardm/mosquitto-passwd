@@ -10,7 +10,7 @@ LABEL org.label-schema.schema-version="1.0.0-rc1" \
   org.label-schema.vcs-ref=$VCS_REF \
   org.label-schema.vendor="Martin Hartmann" \
   org.label-schema.version=$BUILD_VERSION \
-  org.label-schema.docker.cmd="docker run -v $(pwd)/passwd:/passwd burkhardm/mosquitto-passwd user0 user1 user2"
+  org.label-schema.docker.cmd="docker run -v ${pwd}/passwd:/passwd burkhardm/mosquitto-passwd user0 user1 user2"
 
 ARG BUILD_DATE=""
 ARG VCS_REF=""
