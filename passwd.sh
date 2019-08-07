@@ -5,7 +5,6 @@ set -euo pipefail
 plain_file=/passwd/mosquitto.plain
 passwd_file=/passwd/mosquitto.passwd
 
-
 add_user_passwd()
 {
   username=$1
@@ -14,7 +13,7 @@ add_user_passwd()
 
   json_file=/passwd/"$username"_passwd.json
   echo "Saving username and plain-text password to '$json_file'."
-  echo -e "{\n  \"Username\":\"${username}\",\n  \"Password\":\"${passwd}\"\n}\n" >> "$json_file"
+  echo -e "{\n  \"Username\":\"${username}\",\n  \"Password\":\"${passwd}\"\n}\n" > "$json_file"
 
   echo "Appending username and plain-text password to '$plain_file'."
   echo "$username:$passwd" >> "$plain_file"
