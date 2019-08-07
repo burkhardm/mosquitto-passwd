@@ -16,6 +16,8 @@ ARG BUILD_DATE=""
 ARG VCS_REF=""
 ARG BUILD_VERSION="0.2"
 
+VOLUME /passwd
+
 RUN apk add --no-cache bash mosquitto openssl && rm -rf /var/cache/apk/*
 COPY ./passwd.sh /passwd.sh
 RUN chmod +x /passwd.sh
